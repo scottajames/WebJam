@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-* {
-	font-family: 'Open Sans', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 html {
   scroll-behavior: smooth;
 }
@@ -9,22 +7,25 @@ ul li {
 	list-style-type: none;
 }
 a {
-	color:  white;
 	text-decoration: none;
 	font-size: min(max(1vmin, 2vmin), 16px);
+	font-family: 'Roboto', sans-serif;
 }
 p {
 	font-size: min(max(1.5vmin, 2.5vmin), 20px);
+	font-family: 'Roboto', sans-serif;
 }
 h1 {
 	font-size: min(max(3vmin, 4vmin), 48px);
+	font-family: 'Oswald', sans-serif;
 }
 h2 {
 	font-size: min(max(2.5vmin, 3.5vmin), 36px);
+	font-family: 'Oswald', sans-serif;
 }
 h3 {
 	font-size: min(max(2vmin, 3vmin), 24px);
-	font-weight: lighter;
+	font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -49,6 +50,9 @@ header nav {
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
+}
+header nav a {
+	color:  white;
 }
 header nav a:hover {
 	opacity: 0.9;
@@ -75,9 +79,11 @@ header h1 {
 	}
 }
 .container {
+	max-width: 1024px;
+	margin: auto;
 	display:  grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 0fr 0fr 0fr 0fr;
+  grid-template-rows: 0.25fr 0fr 0fr 0fr 0fr 0fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -86,10 +92,11 @@ header h1 {
     "wwd wwd wwd"
     "mission mission mission"
     "help help help"
-    "Game Game Game";
+    "Game Game Game"
+    "Sucess Sucess Sucess";
 }
 #about {
-	max-width:  1024px;
+	width:  80%;
 	text-align: center;
   align-items: center;
   margin:  auto;
@@ -104,8 +111,6 @@ header h1 {
 .aboutText { grid-area: aboutText;
 }
 #wwd {
-	max-width:  1024px;
-	margin:  auto;
 	padding:  5vh 5vw;
 	display: grid; 
   grid-template-columns: 1fr 1fr 1fr; 
@@ -117,6 +122,9 @@ header h1 {
   grid-area: wwd;
   background:  #f4f4f2;
 }
+#wwd img {
+	width:  100%;
+}
 .wwdTitle {
 	grid-area: wwdTitle;
 	margin:  auto;
@@ -124,28 +132,18 @@ header h1 {
 .wwd1 {
 	grid-area: wwd1;
 }
-.wwd1 img {
-	width: 100%;
-}
 .wwd2 {
 	grid-area: wwd2;
-}
-.wwd2 img {
-	width: 100%;
 }
 .wwd3 {
 	grid-area: wwd3;
 }
-.wwd3 img {
-	width: 100%;
-}
 .mission {
-	max-width:  1024px;
-	margin:  auto;
 	display: grid; 
 	text-align: center;
 	color:  white;
 	padding:  5vh 5vw;
+	height: 20vh;
 	background-image: url(elephant3.jpg);
 	background-position: center;
 	background-size:  100% 100%;
@@ -179,13 +177,11 @@ header h1 {
 	transition: 0.3s;
 }
 #help {
-	max-width:  1024px;
-	margin:  auto;
-	padding:  5vh 5vw;
+	padding:  2.5vh 5vw;
 	display: grid; 
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr; 
-  grid-gap: 2vh 1vw; 
+  grid-gap: 1vh 1vw; 
   grid-template-areas: 
     "helpTitle helpTitle" 
     "help1 help2"
@@ -194,67 +190,41 @@ header h1 {
   background:  #f4f4f2;
 }
 #help h3 {
-	padding: 0;
 	margin:  1vh 1vw;
 }
 #help p {
-	padding: 0;
 	margin:  1vh 1vw;
-}
-#help img {
-	width: 100%;
-	height: 100%;
 }
 .helpTitle {
 	grid-area: helpTitle;
 	text-align: center;
 }
 .help1 {
-	display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  grid-gap: 0vh 1vw; 
-  grid-template-areas: 
-    "help1Text help1Image";
   grid-area: help1;
   background:  white;
+  cursor: pointer;
 }
 .help2 {
 	display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  grid-gap: 0vh 1vw; 
-  grid-template-areas: 
-    "help2Text help2Image";
-  grid-area: help2;
   background:  white;
+  cursor: pointer;
 }
 .help3 {
 	display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  grid-gap: 0vh 1vw; 
-  grid-template-areas: 
-    "help3Text help3Image";
-  grid-area: help3;
   background:  white;
+  cursor: pointer;
 }
 .help4 {
-	display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  grid-gap: 0vh 1vw; 
-  grid-template-areas: 
-    "help4Text help4Image";
   grid-area: help4;
   background:  white;
+  cursor: pointer;
 }
 .Game {
+	height: 20vh;
 	max-width:  1024px;
 	display: grid; 
 	text-align: center;
 	color:  white;
-	margin:  auto;
 	padding:  5vh 5vw;
 	background-image: url(elephant3.jpg);
 	background-position: center;
@@ -262,7 +232,7 @@ header h1 {
 	background-repeat: no-repeat;
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr; 
-  gap: 0vh 0vw; 
+  gap: 0vh 0vw;
   grid-template-areas: 
     "GameTitle GameTitle GameTitle" 
     "answer1 answer2 answer3";
@@ -273,17 +243,41 @@ header h1 {
 }
 .answer1 {
 	grid-area: answer1;
+	cursor: pointer;
 }
 .answer2 {
 	grid-area: answer2;
+	cursor: pointer;
 }
 .answer3 {
 	grid-area: answer3;
+	cursor: pointer;
+}
+#Sucess {
+	padding:  5vh 5vw;
+	display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-gap: 2.5vw; 
+  grid-template-areas: 
+    "Sucess1 Sucess2 Sucess3";
+  grid-area: Sucess;
+  text-align: center;
+}
+#Sucess img {
+	width:  100%;
+}
+#Sucess h3 {
+	padding:  0;
+	margin:  0;
+}
+#Sucess p {
+	padding:  0;
+	margin:  0;
 }
 footer {
 	padding: 1vh;
-	color: white;
-	background: #949493;
+	background: #f4f4f2;
 	display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -293,14 +287,16 @@ footer {
     "footerNav footerText";
 }
 footer a {
+	color:  #261911;
 	display:  block;
 }
 footer label {
+	font-family: 'Oswald', sans-serif;
 	font-size: min(max(2.5vmin, 3.5vmin), 28px);
 }
 footer input {
+	font-family: 'Roboto', sans-serif;
 	font-size: min(max(2vmin, 3vmin), 24px);
-	color: black;
 	border:  1px solid black;
 }
 .footerNav {
