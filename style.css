@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-footer {
-	display:  none;
-}
 * {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -12,6 +9,7 @@ ul li {
 	list-style-type: none;
 }
 a {
+	color:  white;
 	text-decoration: none;
 	font-size: min(max(1vmin, 2vmin), 16px);
 }
@@ -37,9 +35,8 @@ body {
 }
 header {
 	width:  100vw;
-	height:  40vh;
+	height:  60vh;
 	background-image: url(elephant.png);
-	background-position: center center;
 	background-size:  100vw 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -53,14 +50,11 @@ header nav {
 	justify-content: space-around;
 	align-items: center;
 }
-header nav a {
-	color: white;
-}
 header nav a:hover {
 	opacity: 0.9;
 }
 header h1 {
-	height:  20vh;
+	height:  40vh;
 	width:  50vw;
 	display: flex;
   align-items: center;
@@ -83,16 +77,16 @@ header h1 {
 .container {
 	display:  grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1fr 0fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0fr 0fr 0fr 0fr;
   grid-auto-rows: 1fr;
-  gap: 0vh 0px;
+  gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "about about about"
     "wwd wwd wwd"
     "mission mission mission"
-    ". . ."
-    ". . .";
+    "help help help"
+    "Game Game Game";
 }
 #about {
 	max-width:  1024px;
@@ -131,7 +125,7 @@ header h1 {
 	grid-area: wwd1;
 }
 .wwd1 img {
-	width: 100%
+	width: 100%;
 }
 .wwd2 {
 	grid-area: wwd2;
@@ -143,7 +137,7 @@ header h1 {
 	grid-area: wwd3;
 }
 .wwd3 img {
-	width: 100%
+	width: 100%;
 }
 .mission {
 	max-width:  1024px;
@@ -153,7 +147,7 @@ header h1 {
 	color:  white;
 	padding:  5vh 5vw;
 	background-image: url(elephant3.jpg);
-	background-position: center center;
+	background-position: center;
 	background-size:  100% 100%;
 	background-repeat: no-repeat;
   grid-template-columns: 1fr 1fr 1fr; 
@@ -183,4 +177,140 @@ header h1 {
 .missionButton a:hover {
 	background:  grey;
 	transition: 0.3s;
+}
+#help {
+	max-width:  1024px;
+	margin:  auto;
+	padding:  5vh 5vw;
+	display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-gap: 2vh 1vw; 
+  grid-template-areas: 
+    "helpTitle helpTitle" 
+    "help1 help2"
+    "help3 help4";
+  grid-area: help;
+  background:  #f4f4f2;
+}
+#help h3 {
+	padding: 0;
+	margin:  1vh 1vw;
+}
+#help p {
+	padding: 0;
+	margin:  1vh 1vw;
+}
+#help img {
+	width: 100%;
+	height: 100%;
+}
+.helpTitle {
+	grid-area: helpTitle;
+	text-align: center;
+}
+.help1 {
+	display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-gap: 0vh 1vw; 
+  grid-template-areas: 
+    "help1Text help1Image";
+  grid-area: help1;
+  background:  white;
+}
+.help2 {
+	display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-gap: 0vh 1vw; 
+  grid-template-areas: 
+    "help2Text help2Image";
+  grid-area: help2;
+  background:  white;
+}
+.help3 {
+	display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-gap: 0vh 1vw; 
+  grid-template-areas: 
+    "help3Text help3Image";
+  grid-area: help3;
+  background:  white;
+}
+.help4 {
+	display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  grid-gap: 0vh 1vw; 
+  grid-template-areas: 
+    "help4Text help4Image";
+  grid-area: help4;
+  background:  white;
+}
+.Game {
+	max-width:  1024px;
+	display: grid; 
+	text-align: center;
+	color:  white;
+	margin:  auto;
+	padding:  5vh 5vw;
+	background-image: url(elephant3.jpg);
+	background-position: center;
+	background-size:  100% 100%;
+	background-repeat: no-repeat;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0vh 0vw; 
+  grid-template-areas: 
+    "GameTitle GameTitle GameTitle" 
+    "answer1 answer2 answer3";
+  grid-area: Game;
+}
+.GameTitle {
+	grid-area: GameTitle;
+}
+.answer1 {
+	grid-area: answer1;
+}
+.answer2 {
+	grid-area: answer2;
+}
+.answer3 {
+	grid-area: answer3;
+}
+footer {
+	padding: 1vh;
+	color: white;
+	background: #949493;
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "footerNav footerText";
+}
+footer a {
+	display:  block;
+}
+footer label {
+	font-size: min(max(2.5vmin, 3.5vmin), 28px);
+}
+footer input {
+	font-size: min(max(2vmin, 3vmin), 24px);
+	color: black;
+	border:  1px solid black;
+}
+.footerNav {
+	grid-area: footerNav;
+	margin: auto;
+}
+.footerText {
+	grid-area: footerText;
+	margin: auto;
+}
+.footerText p {
+	width:  60%;
 }
