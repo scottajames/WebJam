@@ -83,7 +83,7 @@ header h1 {
 	margin: auto;
 	display:  grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0fr 0fr 0fr 0fr 0fr;
+  grid-template-rows: auto auto 40vh auto 40vh auto;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -115,7 +115,7 @@ header h1 {
 	display: grid; 
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr; 
-  grid-gap: 2.5vw; 
+  grid-gap: 0vh 2.5vw; 
   grid-template-areas: 
     "wwdTitle wwdTitle wwdTitle" 
     "wwd1 wwd2 wwd3";
@@ -140,21 +140,20 @@ header h1 {
 }
 .mission {
 	display: grid; 
-	text-align: center;
 	color:  white;
+	margin: auto;
+	text-align: center;
 	padding:  5vh 5vw;
-	height: 20vh;
 	background-image: url(elephant3.jpg);
 	background-position: center;
 	background-size:  100% 100%;
 	background-repeat: no-repeat;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto; 
   gap: 0vh 0vw; 
   grid-template-areas: 
     "missionTitle missionTitle missionTitle" 
-    "missionText missionText missionText"
-    "missionButton missionButton missionButton";
+    "missionText missionText missionText";
   grid-area: mission;
 }
 .missionTitle {
@@ -162,19 +161,6 @@ header h1 {
 }
 .missionText {
 	grid-area: missionText;
-}
-.missionButton {
-	grid-area: missionButton;
-}
-.missionButton a {
-	background:  white;
-	color:  black;
-	border:  1px solid black;
-	padding:  1vh 1vw;
-}
-.missionButton a:hover {
-	background:  grey;
-	transition: 0.3s;
 }
 #help {
 	padding:  2.5vh 5vw;
@@ -220,19 +206,18 @@ header h1 {
   cursor: pointer;
 }
 .Game {
-	height: 20vh;
-	max-width:  1024px;
 	display: grid; 
-	text-align: center;
 	color:  white;
+	margin: auto;
+	text-align: center;
 	padding:  5vh 5vw;
 	background-image: url(elephant3.jpg);
 	background-position: center;
 	background-size:  100% 100%;
 	background-repeat: no-repeat;
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0vh 0vw;
+  grid-template-rows: auto; 
+  gap: 0vh 0vw; 
   grid-template-areas: 
     "GameTitle GameTitle GameTitle" 
     "answer1 answer2 answer3";
