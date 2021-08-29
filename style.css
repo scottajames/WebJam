@@ -65,19 +65,6 @@ header h1 {
   justify-content: center;
 	color:  white;
 }
-@media (max-width: 800px) {
-	header {
-		background-attachment: scroll;
-	}
-	header nav {
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: flex-start;
-		background: black;
-		width:  100vw;
-		opacity: 0.9;
-	}
-}
 .container {
 	max-width: 1024px;
 	margin: auto;
@@ -186,25 +173,128 @@ header h1 {
 	grid-area: helpTitle;
 	text-align: center;
 }
-.help1 {
+#help1 {
   grid-area: help1;
   background:  white;
   cursor: pointer;
 }
-.help2 {
+#help2 {
 	grid-area: help2;
   background:  white;
   cursor: pointer;
 }
-.help3 {
+#help3 {
 	grid-area: help3;
   background:  white;
   cursor: pointer;
 }
-.help4 {
+#help4 {
   grid-area: help4;
   background:  white;
   cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.donateCash-modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+}
+.donateCash-modal input {
+  display:  inline;
+  margin:  1vw auto;
+  text-align: center;
+}
+.donateCash-modal button {
+	display: inline;
+  font-size: min(max(3vmin, 4vmin), 48px);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+  margin:  1vw;
+}
+.donateOther-modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+#donateButton1 {
+  height: 60px;
+  width: 100px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+}
+#donateButton2 {
+  height: 60px;
+  width: 100px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+}
+#donateButton3 {
+  height: 60px;
+  width: 100px;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+}
+#donateButton1:focus {
+  background: #56ad9c;
+}
+#donateButton2:focus {
+  background: #56ad9c;
+}
+#donateButton3:focus {
+  background: #56ad9c;
+}
+#donateOther {
+  margin:  auto;
+  text-align: center;
+}
+.donateOther-modal p {
+  position: relative;
+  left:  20%;
+  width:  60%;
+}
+.donateOther-modal input {
+  margin:  2vh auto;
+  display:  block;
+}
+.donateOther-modal button {
+  font-size: min(max(3vmin, 4vmin), 48px);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+  margin:  1vw;
 }
 .Game {
 	display: grid; 
@@ -220,23 +310,46 @@ header h1 {
   gap: 0vh 0vw; 
   grid-template-areas: 
     "GameTitle GameTitle GameTitle" 
-    "answer1 answer2 answer3";
+    "answer1 answer2 answer3"
+    "Wrong Wrong Wrong"
+    "Correct Correct Correct";
   grid-area: Game;
 }
-.GameTitle {
+#GameTitle {
 	grid-area: GameTitle;
 }
 .answer1 {
 	grid-area: answer1;
 	cursor: pointer;
+	font-size: min(max(2.5vmin, 3.5vmin), 36px);
+	font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+  margin: 1vw;
 }
 .answer2 {
 	grid-area: answer2;
 	cursor: pointer;
+	font-size: min(max(2.5vmin, 3.5vmin), 36px);
+	font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+  margin: 1vw;
 }
 .answer3 {
 	grid-area: answer3;
 	cursor: pointer;
+	font-size: min(max(2.5vmin, 3.5vmin), 36px);
+	font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #0e8b72;
+  margin: 1vw;
 }
 #Sucess {
 	padding:  5vh 5vw;
@@ -293,4 +406,29 @@ footer input {
 }
 .footerText p {
 	width:  60%;
+}
+@media (max-width: 800px) {
+	header {
+		background-attachment: scroll;
+	}
+	header nav {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+		background: black;
+		width:  100vw;
+		opacity: 0.9;
+	}
+	.mission {
+	background-attachment: scroll;
+	}
+	..donateCash-modal input {
+  display:  block;
+}
+	.Game {
+	background-attachment: scroll;
+	}
+	.Game button {
+		display:  block;
+	}
 }

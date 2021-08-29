@@ -16,7 +16,7 @@
 		<a href="#about">About us</a>
 		<a href="#wwd">What we do</a>
 		<a href="#help">How can I help?</a>
-		<a href="#">Success stories</a>
+		<a href="#Sucess">Success stories</a>
     </nav>
     <div class="header-title">
 		<h1>FIGHTING TO END<br>THE ELEPHANT<br>IVORY TRADE</h1>
@@ -40,26 +40,100 @@
     </p></div>
   </div>
   <div id="help">
-  	<div class="helpTitle"><h2>How can I help?</h2></div>
-    <div class="help1">
+    <div class="helpTitle"><h2>How can I help?</h2></div>
+    <div id="help1">
       <h3>Give in celebration</h3><p>Whether it’s a birthday, wedding or other milestone moment, support the African elephant at your special occasion. </p>
     </div>
-    <div class="help2">
+    <div id="help2">
       <h3>Donate from will</h3><p>We couldn't do what we do without the support of people who leave us a legacy – in fact, gifts in wills make up about a fifth of all our donated income.</p>
     </div>
-    <div class="help3">
-      <h3>Adopt an elephant</h3><p>The magnificent elephant is under threat; around 47 African elephants are killed a day for their tusks. Key populations are in decline due to poaching and a shrinking habitat.</p>
+    <div id="help3">
+      <h3>Monthly donation</h3><p>The magnificent elephant is under threat; around 47 African elephants are killed a day for their tusks. Key populations are in decline due to poaching and a shrinking habitat.</p>
     </div>
-    <div class="help4">
+    <div id="help4">
       <h3>One-off donation.</h3><p>Following a one-off donation of £25, you will receive a super-soft plush toy, fun facts about elephants, and a certificate you can personalise to celebrate their support,  all delivered in a beautiful environmentally friendly box. We’ll also keep you updated about how your support is helping when we can.</p>
     </div>
+
+<!-- The Modal -->
+<div id="donateCash" class="modal">
+  <!-- Modal content -->
+  <div class="donateCash-modal">
+    <h2>Monthly Donation</h2>
+    <input type="button" id="donateButton1" value="£3">
+    <input type="button" id="donateButton2" value="£6">
+    <input type="button" id="donateButton3" value="£12">
+      <h2>One time Donation</h2>
+      <input type="text" id="oneOff" name="oneOff" placeholder="$ 0.00" style="width:60%; height: 30px;">
+      <br>
+      <button onClick="window.location.href=window.location.href">Submit</button>
+  </div>
+</div>
+<div id="donateOther" class="modal">
+  <!-- Modal content -->
+  <div class="donateOther-modal">
+    <h2>Please put details below</h2>
+    <p>You will recieve an email giving you more infomation about giving in celebration and/or about donating from your will.</p>
+    <input typ="text" name="Fname" placeholder="First Name" style="width:60%; height: 30px;">
+    <input typ="text" name="Lname" placeholder="Last Name" style="width:60%; height: 30px;">
+    <input typ="text" name="Email" placeholder="Email" style="width:60%; height: 30px;">
+    <button onClick="window.location.href=window.location.href">Submit</button>
+  </div>
+</div>
+
+
+<script>
+
+// Get the modal
+var modal1 = document.getElementById("donateCash");
+var modal2 = document.getElementById("donateOther");
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("help1");
+var btn2 = document.getElementById("help2");
+var btn3 = document.getElementById("help3");
+var btn4 = document.getElementById("help4");
+
+// When the user clicks the button, open the modal 
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+btn2.onclick = function() {
+  modal1.style.display = "block";
+}
+btn3.onclick = function() {
+  modal2.style.display = "block";
+}
+btn4.onclick = function() {
+  modal2.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+    
   </div>
   <div class="Game">
-    <div class="GameTitle"><h3>How many African elephants have been wiped out in the past century?</h3></div>
-  <button class="answer1">40%</button>
-  <button class="answer2">75%</button>
-  <button class="answer3">90%</button>
+    <div id="GameTitle"><h3 id="GameText">How many African elephants have been wiped out in the past century?</h3></div>
+  <button class="answer1" onclick="wrong()">40%</button>
+  <button class="answer2" onclick="wrong()">75%</button>
+  <button class="answer3" onclick="correct()">90%</button>
   </div>
+  <script>
+  function wrong() {
+  var Wrong = document.getElementById("GameText").innerHTML = "Wrong. Around 90% of African elephants have been wiped out in the past century - largely due to the ivory trade - leaving an estimated 415,000 wild elephants alive today";
+}
+  function correct() {
+  var Correct = document.getElementById("GameText").innerHTML = "Correct. Around 90% of African elephants have been wiped out in the past century - largely due to the ivory trade - leaving an estimated 415,000 wild elephants alive today.";
+}
+</script>
+
   <div id="Sucess">
     <div class="Sucess1"><img src="buttercup_elephant.jpg"><h3>Buttercup</h3><p>Our heaviest rescue to date – after years of isolation for the African elephant Buttercup, her loneliness finally ends!</p></div>
     <div class="Sucess2"><img src="jumbo_elephant.jpg"><h3>Jumbo</h3><p>After many years in the circus, a new life is finally beginning for this African elephant.</p></div>
@@ -69,10 +143,10 @@
 <footer>
   <div class="footerNav">
   <h3>Quick links</h3>
-    <a href="#">About us</a>
-    <a href="#">What we do</a>
-    <a href="#">How can I help?</a>
-    <a href="#">Success stories</a>
+    <a href="#about">About us</a>
+    <a href="#wwd">What we do</a>
+    <a href="#help">How can I help?</a>
+    <a href="#Sucess">Success stories</a>
   </div>
   <div class="footerText">
     <h3>Subscribe to our newsletter</h3>
@@ -80,7 +154,7 @@
     <form>
       <label for="email">Newsletter</label>
       <input type="email" id="email" name="email">
-      <input type="submit" value="subscribe" style="cursor: pointer;">
+      <input type="submit" value="subscribe" style="cursor: pointer; color: white; background: #0e8b72;">
     </form>
   </div>
 </footer>
